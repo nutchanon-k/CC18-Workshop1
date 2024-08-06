@@ -1,0 +1,259 @@
+/* GLobal */
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    background-color: lightblue;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    background-color:skyblue ;
+    align-items: flex-end;
+    border-bottom: 4px solid salmon;
+    justify-content: space-between;
+    min-height: 100px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 50px 40px 0px 40px; */
+    margin: 0 auto;
+    width: 80%;
+    
+}
+
+.branding{
+    color: white;
+}
+.branding span {
+    color: deeppink;
+    
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+nav ul{
+    display: flex;
+    gap: 8px;
+    font-size: 1.2rem;
+    
+}
+
+nav li{
+    display: flex;
+    list-style-type: none;
+    padding: 0px 20px;
+    /* align-items: flex-end; */
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+
+header a:hover{
+    color: blueviolet;
+}
+header .current {
+    background-color: deeppink;
+}
+
+.showcase{
+    background: url("https://picsum.photos/id/2/1500/500/?blur=7");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.showcase .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%; 
+    text-align: center;
+}
+
+.showcase .container h1{
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.showcase .container p{
+    color: deeppink;
+    font-size: 1.5rem;
+    padding-inline: 10%;
+}
+
+/* News Letter */
+.newsletter {
+    padding: 15px;
+    display: flex;
+    background-color: rgb(116, 202, 236);
+    
+}
+
+.newsletter .container{
+    display: flex;
+    align-items: center;
+}
+
+.newsletter h1{
+    color: salmon;
+    font-size: 1.5rem;
+}
+.newsletter form{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.newsletter input[type=email]{
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 250px;
+    /* height: 2rem; */
+    border: none;
+}
+.newsletter button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(253, 119, 2);
+    color: white;
+    /* font-size: 1rem; */
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.newsletter button:hover{
+    transform: scale(1.2);
+    background-color: rgb(255, 158, 73);
+}
+
+/*Feature Boxs*/
+
+.boxes .container {
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 50px;
+    padding: 20px 10px;
+    align-items: flex-start;
+
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 10px;
+    
+
+}
+
+.box p{
+    text-align: justify;
+}
+
+.box h1{
+    padding: 10px
+
+};
+.box img {
+    /* width: 200px; */
+    height: 120px;
+    
+}
+
+/*Footer*/
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color:  rgb(116, 202, 236);
+    color: white;
+}
+
+@media (max-width : 800px) {
+    header .container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .branding {
+        padding: 10px;
+    }
+
+    nav{
+        /* border: 2px solid salmon; */
+        width: 100%;
+        text-align: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        /* flex-direction: column; */
+        /* border: 2px solid black; */
+        width: 100%;
+        /* gap: 0; */
+        
+    }
+
+    nav li{
+        width: 100%;
+        background-color: aqua;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    nav a{
+        display: flex;
+        text-align: center;
+        /* width: 100%; */
+        /* flex-basis: 100%; */
+    }
+    
+    
+    
+    
+    
+    .newsletter .container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container form{
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px;
+        width: 100%; 
+    }
+    .newsletter .container form input{
+        width: 100%;
+    }
+    .newsletter .container form button{
+        width: 100%;
+    }
+
+    .boxes .container {
+        flex-direction: column;
+    }
+}
